@@ -59,7 +59,19 @@ Per vedere tutti i parametri, leggi la documentazione [qui](https://docs.docker.
 
 ### Comando: run 
 
+Il comando ` docker run X` crea immagini Docker da un file Docker e un "contesto". Il contesto di una build è l'insieme di file che si trovano nel PERCORSO o URL specificato. Il processo di compilazione può fare riferimento a qualsiasi file nel contesto.
+
+Esempio:
+
+` docker run image `
+
+Per vedere tutti i parametri, leggi la documentazione [qui](https://docs.docker.com/engine/reference/commandline/run/).
+
 ### Comando: exec
+
+Questo comando viene utilizzato quando si desidera eseguire un comando in un contenitore esistente. Questo è meglio se hai già un contenitore in esecuzione e vuoi cambiarlo o ottenere qualcosa da esso. Ad esempio, se si sta utilizzando docker-compose, probabilmente creerai più contenitori e potresti voler accedere a uno o più di essi una volta creati. `docker exec` ha anche una gamma di opzioni e argomenti che è possibile specificare, sebbene sia necessario specificare il contenitore e il comando da eseguire. Puoi avviare una shell bash interattiva su un contenitore chiamato ubuntu_bash usando:
+
+` docker exec -it /bin/bash container1`
 
 ### Comando: stop
 
