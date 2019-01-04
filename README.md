@@ -49,6 +49,14 @@ Esempio:
 
 ### Comando: build
 
+Il comando di costruzione di un'immagine Docker viene eseguito a partire da un file Docker e un "contesto". Il contesto di una build è l'insieme di file che si trovano nel PERCORSO o nell'URL specificato. Il processo di compilazione può fare riferimento a qualsiasi file nel contesto. Una volta che l'immagine sarà "compilata", potrà essere eseguita; un po' come se l'immagine Docker costituisse una classe e il container un oggetto istanziato di quella classe.
+
+Esempio:
+
+` docker build . `
+
+Per vedere tutti i parametri, leggi la documentazione [qui](https://docs.docker.com/engine/reference/commandline/build/).
+
 ### Comando: run 
 
 ### Comando: exec
