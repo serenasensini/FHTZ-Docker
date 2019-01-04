@@ -41,13 +41,11 @@ Analizzando le istruzioni, possiamo vedere che:
 
 ### Comando: ps
 
-Mostra tutti i container attivi. Con l'opzione `-a` si hanno anche i container stoppati.
+*Mostra tutti i container attivi.* Con l'opzione `-a` si hanno anche i container stoppati.
 
 Esempio:
 
 ` docker ps ` 
-
-### Comando: stop
 
 ### Comando: build
 
@@ -57,7 +55,19 @@ Esempio:
 
 ### Comando: stop
 
+*Ferma l'esecuzione del container specificato*. Il codice presente dopo l'istruzione rappresenta l'ID del container.
+
+Esempio:
+
+` docker stop 1a8f7f927 `
+
 ### Comando: rm
+
+*Rimuove il container specificato*. Il codice presente dopo l'istruzione rappresenta l'ID del container. Il container non viene rimosso se ancora in esecuzione
+
+Esempio:
+
+` docker rm 1a8f7f927 `
 
 ## Tips
 - __Differenza tra immagine e container?__ Un'istanza di un'immagine è chiamata contenitore. Hai un'immagine, che è un insieme di livelli che descrivi. Se si avvia questa immagine, si dispone di un contenitore in esecuzione di questa immagine. Puoi avere molti contenitori in esecuzione della stessa immagine.
