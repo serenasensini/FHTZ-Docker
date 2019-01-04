@@ -32,10 +32,10 @@ CMD python /app/app.py
 ```
 
 Analizzando le istruzioni, possiamo vedere che:
-- FROM : utilizza un'immagine base che possa fornirci uno strumento con cui far partire il nostro sistema; in questo caso, si è scelto Ubuntu come sistema operativo, perché ha già Python installato, ma è possibile utilizzare moltissime altre immagini, disponibili sul Docker Hub;
-- COPY : copia la cartella corrente, indicata con '.', nella cartella '/app' del container;
-- RUN : esegue dei comandi da terminale; in questo caso, aggiorna il sistema;
-- CMD : esegue lo script Python, in questo caso, ma può essere utilizzato per molti altri scopi.
+- __FROM__ : utilizza un'immagine base che possa fornirci uno strumento con cui far partire il nostro sistema; in questo caso, si è scelto Ubuntu come sistema operativo, perché ha già Python installato, ma è possibile utilizzare moltissime altre immagini, disponibili sul Docker Hub;
+- __COPY__ : copia la cartella corrente, indicata con '.', nella cartella '/app' del container;
+- __RUN__ : esegue dei comandi da terminale; in questo caso, aggiorna il sistema;
+- __CMD__ : esegue lo script Python, in questo caso, ma può essere utilizzato per molti altri scopi.
 
 ## Comandi
 
