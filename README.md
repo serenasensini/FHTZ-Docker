@@ -91,15 +91,15 @@ Esempio:
 
 ## Cheatsheet
 
-Per arrestare tutti i contenitori (attenzione!)
+Per arrestare tutti i contenitori, digitare:
 
 ` docker stop $(docker ps -a -q) `
 
-Per rimuovere tutti i contenitori (attenzione!)
+Per rimuovere tutti i contenitori, digitare:
 
 ` docker rm $(docker ps -a -q) `
 
-Per rimuovere tutte le immagini (attenzione!)
+Per rimuovere tutte le immagini, digitare:
 
 ` docker rmi -f $(docker images -q) `
 
