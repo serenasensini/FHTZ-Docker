@@ -89,6 +89,20 @@ Esempio:
 
 ` docker rm 1a8f7f927 `
 
+## Cheatsheet
+
+Per arrestare tutti i contenitori (attenzione!)
+
+` docker stop $(docker ps -a -q) `
+
+Per rimuovere tutti i contenitori (attenzione!)
+
+` docker rm $(docker ps -a -q) `
+
+Per rimuovere tutte le immagini (attenzione!)
+
+` docker rmi -f $(docker images -q) `
+
 ## Tips
 - __Differenza tra immagine e container?__ Un'istanza di un'immagine è chiamata contenitore. Hai un'immagine, che è un insieme di livelli che descrivi. Se si avvia questa immagine, si dispone di un contenitore in esecuzione di questa immagine. Puoi avere molti contenitori in esecuzione della stessa immagine.
 - __Qual è la differenza con una VM?__ Le macchine virtuali (VM) sono un'astrazione dell'hardware fisico che trasforma un server in molti server. L'hypervisor consente a più macchine virtuali di essere eseguite su una singola macchina. Ogni VM include una copia completa di un sistema operativo, l'applicazione, i binari e le librerie necessarie, occupando decine di GB. Le macchine virtuali sono generalmente lente da avviare. ![Schema](http://img.scoop.it/tImVj_1Pbqv0HJDyMWTmBbnTzqrqzN7Y9aBZTaXoQ8Q=) Credits to: [Blog Docker](https://blog.docker.com/2016/04/containers-and-vms-together/)
