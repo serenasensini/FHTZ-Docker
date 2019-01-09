@@ -71,7 +71,7 @@ Per vedere tutti i parametri, leggi la documentazione [qui](https://docs.docker.
 
 Questo comando viene utilizzato quando si desidera eseguire un comando in un contenitore esistente. Questo è meglio se hai già un contenitore in esecuzione e vuoi cambiarlo o ottenere qualcosa da esso. Ad esempio, se si ha un contenitore in esecuzione, potresti voler accedere a uno o più di essi una volta creati. `docker exec` ha anche una gamma di opzioni e argomenti che è possibile specificare, sebbene sia necessario specificare il contenitore e il comando da eseguire. Puoi avviare una shell bash interattiva su un contenitore chiamato ubuntu_bash usando:
 
-` docker exec -it /bin/bash container1`
+` docker exec -it container1 /bin/bash`
 
 ### Comando: stop
 
