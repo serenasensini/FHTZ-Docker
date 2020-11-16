@@ -65,7 +65,19 @@ Esempio:
 
 ` docker run image `
 
-Per vedere tutti i parametri, leggi la documentazione [qui](https://docs.docker.com/engine/reference/commandline/run/).
+Per vedere tutti i parametri, leggi la documentazione [qui](https://docs.docker.com/engine/reference/commandline/run/). Di seguito vengono riportati quelli più comuni:
+
+| Parametro     |  Descrizione  | Esempio      |
+| ------------- | ------------- |------------- |
+| --help        | Elenca una serie di parametri che è possibile utilizzare| $ docker run --help |
+| --name        | Assegna un nome del container  | $ docker run --name mia_immagine 1234.image.docker.registry |
+| --interactive oppure -i        | Apre un flusso in input all'interno del container in esecuzione  | $ docker run -i 1234.image.docker.registry |
+| --tty  oppure -t        | Predispone una console tty  | $ docker run -t 1234.image.docker.registry |
+| --it        | Permette di accedere al flusso in input tramite /bin/bash o altri per lavorare all'interno del container  | $ docker run -it 1234.image.docker.registry |
+| -p        | Espone l'immagine tramite un porta specificata  | $ docker run -p 1234.image.docker.registry:8000:5000 #espone la porta 5000 del container sulla 8000|
+| --env oppure -e        | Configura una o più variabili di ambiente  | $ docker run --env NOME_ENV=valore_env 1234.image.docker.registry |
+| --env-file        | Legge delle variabili di ambiente da un file  | $ docker run --env-file path/to/file 1234.image.docker.registry |
+| --rm        | Rimuove il container se questo esce | $ docker run --rm 1234.image.docker.registry |
 
 ### Comando: exec
 
