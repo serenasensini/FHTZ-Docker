@@ -69,15 +69,15 @@ Per vedere tutti i parametri, leggi la documentazione [qui](https://docs.docker.
 
 | Parametro     |  Descrizione  | Esempio      |
 | ------------- | ------------- |------------- |
-| --help        | Elenca una serie di parametri che è possibile utilizzare| $ docker run --help |
-| --name        | Assegna un nome del container  | $ docker run --name mia_immagine 1234.image.docker.registry |
-| --interactive oppure -i        | Apre un flusso in input all'interno del container in esecuzione  | $ docker run -i 1234.image.docker.registry |
-| --tty  oppure -t        | Predispone una console tty  | $ docker run -t 1234.image.docker.registry |
-| --it        | Permette di accedere al flusso in input tramite /bin/bash o altri per lavorare all'interno del container  | $ docker run -it 1234.image.docker.registry |
-| -p        | Espone l'immagine tramite un porta specificata  | $ docker run -p 1234.image.docker.registry:8000:5000 #espone la porta 5000 del container sulla 8000|
-| --env oppure -e        | Configura una o più variabili di ambiente  | $ docker run --env NOME_ENV=valore_env 1234.image.docker.registry |
-| --env-file        | Legge delle variabili di ambiente da un file  | $ docker run --env-file path/to/file 1234.image.docker.registry |
-| --rm        | Rimuove il container se questo esce | $ docker run --rm 1234.image.docker.registry |
+| --help        | Elenca una serie di parametri che è possibile utilizzare| `$ docker run --help` |
+| --name        | Assegna un nome del container  | `$ docker run --name mia_immagine 1234.image.docker` |
+| --interactive oppure -i        | Apre un flusso in input all'interno del container in esecuzione  | `$ docker run -i 1234.image.docker` |
+| --tty  oppure -t        | Predispone una console tty  | `$ docker run -t 1234.image.docker` |
+| --it        | Permette di accedere al flusso in input tramite /bin/bash o altri per lavorare all'interno del container  | `$ docker run -it 1234.image.docker` |
+| -p        | Espone l'immagine tramite un porta specificata  | `$ docker run -p 1234.image.docker:8000:5000 #espone la porta 5000 del container sulla 8000` |
+| --env oppure -e        | Configura una o più variabili di ambiente  | `$ docker run --env NOME_ENV=valore_env 1234.image.docker` |
+| --env-file        | Legge delle variabili di ambiente da un file  | `$ docker run --env-file path/to/file 1234.image.docker` |
+| --rm        | Rimuove il container se questo esce | `$ docker run --rm 1234.image.docker` |
 
 ### Comando: exec
 
