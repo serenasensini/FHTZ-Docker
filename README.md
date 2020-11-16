@@ -73,7 +73,7 @@ Per vedere tutti i parametri, leggi la documentazione [qui](https://docs.docker.
 | --name        | Assegna un nome del container  | `$ docker run --name mia_immagine 1234.image.docker` |
 | --interactive oppure -i        | Apre un flusso in input all'interno del container in esecuzione  | `$ docker run -i 1234.image.docker` |
 | --tty  oppure -t        | Predispone una console tty  | `$ docker run -t 1234.image.docker` |
-| --it        | Permette di accedere al flusso in input tramite /bin/bash o altri per lavorare all'interno del container  | `$ docker run -it 1234.image.docker` |
+| --it        | Permette di accedere al flusso in input tramite /bin/bash o altri per lavorare all'interno del container  | `$ docker run -it /bin/bash 1234.image.docker` |
 | -p        | Espone l'immagine tramite un porta specificata  | `$ docker run -p 1234.image.docker:8000:5000 #espone la porta 5000 del container sulla 8000` |
 | --env oppure -e        | Configura una o più variabili di ambiente  | `$ docker run --env NOME_ENV=valore_env 1234.image.docker` |
 | --env-file        | Legge delle variabili di ambiente da un file  | `$ docker run --env-file path/to/file 1234.image.docker` |
@@ -84,6 +84,16 @@ Per vedere tutti i parametri, leggi la documentazione [qui](https://docs.docker.
 Questo comando viene utilizzato quando si desidera eseguire un comando in un contenitore esistente. Questo è meglio se hai già un contenitore in esecuzione e vuoi cambiarlo o ottenere qualcosa da esso. Ad esempio, se si ha un contenitore in esecuzione, potresti voler accedere a uno o più di essi una volta creati. `docker exec` ha anche una gamma di opzioni e argomenti che è possibile specificare, sebbene sia necessario specificare il contenitore e il comando da eseguire. Puoi avviare una shell bash interattiva su un contenitore chiamato ubuntu_bash usando:
 
 ` docker exec -it container1 /bin/bash`
+
+Per vedere tutti i parametri, leggi la documentazione [qui](https://docs.docker.com/engine/reference/commandline/exec/). Di seguito vengono riportati quelli più comuni:
+
+| Parametro     |  Descrizione  | Esempio      |
+| ------------- | ------------- |------------- |
+| --help        | Elenca una serie di parametri che è possibile utilizzare| `$ docker exec --help` |
+| --interactive oppure -i        | Apre un flusso in input all'interno del container in esecuzione  | `$ docker exec -i container_name` |
+| --tty  oppure -t        | Predispone una console tty  | `$ docker exec -t container_name` |
+| --it        | Permette di accedere al flusso in input tramite /bin/bash o altri per lavorare all'interno del container  | `$ docker exec -it /bin/bash container_name` |
+| --env oppure -e        | Configura una o più variabili di ambiente  | `$ docker exec --env NOME_ENV=valore_env container_name` |
 
 ### Comando: stop
 
